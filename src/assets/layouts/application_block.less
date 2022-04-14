@@ -1,0 +1,359 @@
+.application {
+  width   : 682px;
+  height  : 742px;
+  position: relative;
+  margin  : 20vh auto;
+}
+
+.application-info {
+  width        : 200px;
+  height       : 200px;
+  box-sizing   : border-box;
+  padding      : 45px 30px;
+  border-radius: 5px;
+  background   : #ffffff;
+  text-align   : center;
+  margin       : 0;
+  position     : absolute;
+  top          : 50%;
+  right        : 50%;
+  transform    : translate(50%, -50%);
+
+  &:hover {
+    border       : 1px solid #e6eaf2;
+    box-shadow   : 0px 4px 4px rgba(46, 56, 77, 0.02);
+    border-radius: 5px;
+    box-sizing   : border-box;
+    cursor       : grab;
+  }
+
+  &__icon {
+    width : 52.5px;
+    height: 52.5px;
+  }
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-style : normal;
+    font-weight: 400;
+    font-size  : 14px;
+    line-height: 16px;
+    text-align : center;
+    color      : #2e384d;
+  }
+
+  &__counter {
+    position : absolute;
+    top      : 0;
+    left     : 50%;
+    transform: translate(-50%; -50%);
+  }
+}
+
+.block__app-group {
+  position: absolute;
+  top     : 450px;
+  left    : 0;
+
+  &__group {
+    position: relative;
+
+    .line-to-application__app-group {
+      position : absolute;
+      top      : -30%;
+      left     : 100%;
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.block__server {
+  position: absolute;
+  top     : 180px;
+  left    : 0;
+
+  &__group {
+    position: relative;
+
+    .line-to-application__server {
+      position : absolute;
+      top      : 50%;
+      left     : 100%;
+      transform: rotate(180deg);
+      transform: translate(0%, 0%);
+    }
+  }
+}
+
+
+.block__mtv {
+  position: absolute;
+  right   : 0;
+  top     : 450px;
+
+  &__group {
+    position: relative;
+
+    .line-to-application__mtv {
+      position: absolute;
+      top     : -30%;
+      right   : 100%;
+    }
+  }
+}
+
+.block__functions {
+  position : absolute;
+  bottom   : 0;
+  left     : 50%;
+  transform: translate(-50%, 0);
+
+  &__group {
+    position: relative;
+
+    .line-to-application__functions {
+      position : absolute;
+      bottom   : 100%;
+      left     : 50%;
+      transform: translate(-50%, -4%);
+    }
+  }
+}
+
+.block__interface {
+  position : absolute;
+  top      : 10px;
+  left     : 50%;
+  transform: translate(-50%, 0);
+
+  &__group {
+    position: relative;
+
+    .line-to-application__interface__1 {
+      position : absolute;
+      top      : 97%;
+      left     : 20%;
+      transform: rotate(180deg);
+    }
+
+    .line-to-application__interface__2 {
+      position : absolute;
+      top      : 97%;
+      right    : 20%;
+      transform: rotate(180deg);
+    }
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .application {
+    max-width : 360px;
+    max-height: 450px;
+
+    &-info {
+      width  : 100px;
+      height : 100px;
+      padding: 15px 10px;
+
+      &__icon {
+        width : 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .block__app-group {
+    top: 250px;
+
+    &__group {
+      .line-to-application__app-group {
+        top: -20%;
+
+        img {
+          width : 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .block__server {
+    top: 130px;
+
+    &__group {
+      .line-to-application__server {
+        top: 35%;
+
+        img {
+          width : 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .block__mtv {
+    top: 250px;
+
+    &__group {
+      .line-to-application__mtv {
+        top: -25%;
+
+        img {
+          width : 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .block__functions {
+    bottom: 8.5%;
+
+    &__group {
+      .line-to-application__functions {
+        img {
+          width : 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .block__interface {
+    top: 10%;
+
+    &__group {
+      .line-to-application__interface__1 {
+        top : 95%;
+        left: -15%;
+
+        img {
+          width : 60px;
+          height: 60px;
+        }
+      }
+
+      .line-to-application__interface__2 {
+        top  : 95%;
+        right: -15%;
+
+        img {
+          width : 60px;
+          height: 60px;
+        }
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 374px) {
+  .application {
+    max-width : 250px;
+    max-height: 450px;
+
+    &-info {
+      width  : 70px;
+      height : 70px;
+      padding: 10px 1px;
+
+      &__icon {
+        width : 30px;
+        height: 30px;
+      }
+
+      &__title {
+        margin   : 0;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .block__app-group {
+    top: 250px;
+
+    &__group {
+      .line-to-application__app-group {
+        top: -20%;
+
+        img {
+          width : 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .block__server {
+    top: 162px;
+
+    &__group {
+      .line-to-application__server {
+        top: 35%;
+
+        img {
+          width : 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .block__mtv {
+    top: 250px;
+
+    &__group {
+      .line-to-application__mtv {
+        top: -25%;
+
+        img {
+          width : 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .block__functions {
+    bottom: 21%;
+
+    &__group {
+      .line-to-application__functions {
+        img {
+          width : 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .block__interface {
+    top: 22%;
+
+    &__group {
+      .line-to-application__interface__1 {
+        top : 95%;
+        left: 0%;
+
+        img {
+          width : 30px;
+          height: 30px;
+        }
+      }
+
+      .line-to-application__interface__2 {
+        top  : 95%;
+        right: 0%;
+
+        img {
+          width : 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+}
